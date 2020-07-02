@@ -9,12 +9,15 @@ Python以及云服务器.所以这个脚本仅供学习交流,下面我会列出
 [玩转服务器]()(暂未更新) )
 
 如果只是浅层学习的话,会云服务和Python就可以
+如果有学到,请给个star
 ## 1.浅层学习说明
 把zzu_jssk.py文件下载到本地之后,  
 安装equests(模拟登录),BeautifulSoup(HTML解析)库,  
-并更改user和data数据变成你自己的数据![image](image.png)
+并更改user和data数据变成你自己的数据  
+![image](image.png)
 user和data均为字典,user是你的登录名和密码,
-data是最后填报的数据,每一项数据代表的含义都注释了,和填报的顺序完全一致![image_1](image_1.png)
+data是最后填报的数据,每一项数据代表的含义都注释了,和填报的顺序完全一致  
+![image_1](image_1.png)
 可自行对比查看
 
 别的数据无特别情况无需变动
