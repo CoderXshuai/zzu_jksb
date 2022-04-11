@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-from bs4 import BeautifulSoup
-
-import requests
 import re
 
-user = {"no": "2018xxx", "password": "xxx"}  # 学号  # 密码
+import requests
+from bs4 import BeautifulSoup
+
+user = {"no": "2019xxx", "password": "xxx"}  # 学号  # 密码
 
 data = {
     "myvs_1": "否",  # 1是否有发热 是/否
@@ -19,18 +19,11 @@ data = {
     "myvs_10": "否",  # 10是否在居家隔离  是/否
     "myvs_11": "否",  # 11小区/村是否有确诊  是/否
     "myvs_12": "否",  # 12是否有共同具状人确诊  是/否
-    "myvs_13": "g",  # 健康码颜色
     "myvs_13a": "41",  # 13a 所在省的身份证区划代码(前两位)如河南省=41
     "myvs_13b": "4101",  # 13b所在省的身份证区划代码(前四位)如河南郑州=4101
     "myvs_13c": "河南省郑州市高新区科学大道100号",  # 13c具体所在地
-    "myvs_14": "否",  # 14是否为返郑人员
-    "myvs_14b": "",  # 14b 若14a为是,返回前居住地和抵郑时间
-    "myvs_15": "否",  # 15是否为近期返郑人员 是/否
-    "myvs_16": "在家办公",  # 16在家灵活办公还是到校工作   是/否
-    "myvs_16b": "",  # 16b 其他请说明
-    "myvs_17": "B",  # 17 返校的交通方式 A:飞机,B:火车/高铁,C:公共汽车,字母顺序和选项顺序一致,以此类推
-    "myvs_18": "C",  # 18 所在校区,A:主校区,B:南校区,C:北校区,字母顺序和选项顺序一致,以此类推
     "myvs_24": "否",  # 是否为当日返郑人员
+    "myvs_25": "5",  # 应该是和疫苗有关，5是三针
     # 以下内容无需更改
     "did": "2",
     "door": "",
@@ -38,12 +31,15 @@ data = {
     "men6": "a",
     "sheng6": "",
     "shi6": "",
+    "fun18": "819",
     "fun3": "",
+    "jingdu": "113.535807",  # 主校区经度
+    "weidu": "34.81732",  # 主校区纬度
     "ptopid": "",
     "sid": "",
 }
 # 以下内容无需改动
-user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 Edg/83.0.478.56"
+user_agent = "Mozilla/5.0 (Linux; U; Android 2.3.6; zh-cn; GT-S5660 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1 MicroMessenger/4.5.255"
 host = "jksb.v.zzu.edu.cn"
 origin = "https://jksb.v.zzu.edu.cn"
 session = requests.session()
