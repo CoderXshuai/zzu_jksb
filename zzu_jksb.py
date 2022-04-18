@@ -109,11 +109,12 @@ def get_session_data(html):
 # 填写上报表格
 def submit(data):
     url = "https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb"
+    refer = 'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb?' + data['ptopid'] + '&' + data['sid'] + '&fun2'
     headers = {
         "User-Agent": user_agent,
         "Host": host,
         "Origin": origin,
-        "Referer": "https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb",
+        "Referer": refer
     }
     data["ptopid"] = info.get("ptopid")
     data["sid"] = info.get("sid")
