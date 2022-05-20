@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import re
+import my_re
 
 import requests
 from bs4 import BeautifulSoup
@@ -15,7 +15,7 @@ data = {
     "myvs_6": "否",  # 6是否是疑似  是/否
     "myvs_7": "否",  # 7是否是密切接触者  是/否
     "myvs_8": "否",  # 8是否在医疗机构隔离  是/否
-    "myvs_9": "否",  # 9是否在集中点隔离   是/否
+    "myvs_9": "y",  # 9您是否按要求参加了核酸检测   y表示参加了
     "myvs_10": "否",  # 10是否在居家隔离  是/否
     "myvs_11": "否",  # 11小区/村是否有确诊  是/否
     "myvs_12": "否",  # 12是否有共同具状人确诊  是/否
